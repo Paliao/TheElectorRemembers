@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The backend of the application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paliao/TheElectorRemembers.git"
+  },
+  "author": "André Paliao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paliao/TheElectorRemembers/issues"
+  },
+  "homepage": "https://github.com/Paliao/TheElectorRemembers#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-query-int": "^2.0.0",
+    "mongoose": "^5.0.3",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.14.12"
+  }
+}
