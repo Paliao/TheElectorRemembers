@@ -11,7 +11,7 @@ function paginate() {
 }
 
 function counter(data) {
-  data.map(e => console.log(e))
+  data.map(e => console.log(e.id))
 }
 
 function scrap(options) {
