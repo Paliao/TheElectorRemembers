@@ -1,21 +1,22 @@
 const request = require('request-promise')
+const ids = []
 
 function paginate() {
+  const requests = []
+
   for(let i = 1; i < 7; i++){
     const options = {
       uri: `https://dadosabertos.camara.leg.br/api/v2/deputados?itens=100&pagina=${i}`,
       json: true
     }
-    scrap(options)
+    requests.push( scrap(options) )
   }
-}
-
-function counter(data) {
-  data.map(e => console.log(e.id))
+  return Promise.all( requests )
 }
 
 function scrap(options) {
-  request(options).then((resp) => counter(resp.dados)) 
+  return request(options).then((resp) => resp.dados
+    .map(e => e.id))
 }
 
-paginate()
+module.exports = paginate
