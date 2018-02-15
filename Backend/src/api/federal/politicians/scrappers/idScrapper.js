@@ -26,4 +26,4 @@ function idUrls() {
   )
 }
 
-idUrls().then(console.log)
+module.exports = idUrls
