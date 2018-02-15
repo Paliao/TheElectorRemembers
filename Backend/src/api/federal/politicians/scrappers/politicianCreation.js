@@ -21,6 +21,8 @@ function politicalRequision(url) {
     
     const politician = new PoliticianSchema 
       politician.id = politicianInfo.id
+      politician.kind = 'DEPUTADO FEDERAL'
+      politician.electoralUf = lastInfo.siglaUf
       politician.civilName = politicianInfo.nomeCivil
       politician.politicalPartyInitials = lastInfo.siglaPartido
       politician.uriPoliticalParty = lastInfo.uriPartido          

@@ -4,6 +4,8 @@ mongoose.connect('mongodb://localhost/electorRemembers')
 
 const politicianSchema = new mongoose.Schema({
     id: { type: Number, required: true },
+    kind: { type: String, required: true },
+    electoralUf: { type: String, required: true },
     civilName: { type: String, required: true },
     politicalPartyInitials: { type: String, required: true },
     uriPoliticalParty: { type: String, required: true },
