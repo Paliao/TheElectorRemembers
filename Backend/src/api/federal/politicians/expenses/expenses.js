@@ -1,4 +1,6 @@
-const mongoose = require('../../../common/connection')
+const restful = require('node-restful')
+const mongoose = restful.mongoose
+mongoose.connect('mongodb://localhost/electorRemembers')
 
 const expenseSchema = new mongoose.Schema({
   year: { type: String, required: true },

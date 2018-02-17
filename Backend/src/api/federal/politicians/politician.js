@@ -1,4 +1,6 @@
-const mongoose = require('../../../common/connection')
+const restful = require('node-restful')
+const mongoose = restful.mongoose
+mongoose.connect('mongodb://localhost/electorRemembers')
 
 const politicianSchema = new mongoose.Schema({
     id: { type: Number, required: true },
