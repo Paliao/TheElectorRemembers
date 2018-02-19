@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import Navbar from './common/navBar'
+import Navbar from './common/navBar/navBar'
 
 class App extends Component {
   render() {
