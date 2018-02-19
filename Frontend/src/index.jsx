@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider }  from 'react-redux'
-import {  } from 'redux-multi'
+import multi from 'redux-multi'
 import { createStore, applyMiddleware } from  'redux'
 
 import App from './main/app'
