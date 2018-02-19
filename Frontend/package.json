@@ -1,42 +1,23 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "The frontend of the application",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack-dev-server --progress --colors --inline --hot",
-    "prodcution": "webpack --progress -p"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Paliao/TheElectorRemembers.git"
-  },
-  "author": "André Paliao",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Paliao/TheElectorRemembers/issues"
-  },
-  "homepage": "https://github.com/Paliao/TheElectorRemembers#readme",
+  "name": "elector-remembers",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "axios": "^0.17.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-react-html-attrs": "^2.1.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
     "font-awesome": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
+    "react-scripts": "1.1.1",
     "redux": "^3.7.2",
     "redux-multi": "^0.1.12",
-    "redux-thunk": "^2.2.0",
-    "style-loader": "^0.20.2",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

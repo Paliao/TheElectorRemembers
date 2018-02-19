@@ -1,0 +1,26 @@
+ul.navbar {
+  list-style-type: none;
+  background-color: rgb(143, 203, 172);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul.navbar li a:hover {
+  background-color: rgb(24, 106, 73);
+  color: white;
+  -webkit-transition: width 2s;
+  transition: 2s;
+}
