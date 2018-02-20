@@ -12,33 +12,35 @@ function politicalUrl() {
 
 function politicalRequision(url) {
   const options = {
-    uri: url,
+    uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + url,
     json: true
   }
   request(options).then(resp => {
     const politicianInfo = resp.dados
     const lastInfo = politicianInfo.ultimoStatus
     
-    const politician = new PoliticianSchema 
-      politician.id = politicianInfo.id
-      politician.kind = 'DEPUTADO FEDERAL'
-      politician.electoralUf = lastInfo.siglaUf
-      politician.civilName = politicianInfo.nomeCivil
-      politician.politicalPartyInitials = lastInfo.siglaPartido
-      politician.uriPoliticalParty = lastInfo.uriPartido          
-      politician.urlPhoto = lastInfo.urlFoto
-      politician.updated = lastInfo.data
-      politician.electoralName = lastInfo.nomeEleitoral
-      politician.cabinetPhone = lastInfo.gabinete.telefone
-      politician.email = lastInfo.gabinete.email
-      politician.situation = lastInfo.situacao
-      politician.electoralCondition = lastInfo.condicaoEleitoral
-      politician.actualStatus = lastInfo.descricaoStatus
-      politician.gender = politicianInfo.sexo
-      politician.dateOfBirth = politicianInfo.dataNascimento
-      politician.ufOfBirth = politicianInfo.ufNascimento
-      politician.hometown = politicianInfo.municipioNascimento
-      politician.scholarity = politicianInfo.escolaridade
+    const politician = new PoliticianSchema({
+
+      id: politicianInfo.id,
+      kind: 'DEPUTADO FEDERAL',
+      electoralUf: lastInfo.siglaUf,
+      civilName: politicianInfo.nomeCivil,
+      politicalPartyInitials: lastInfo.siglaPartido,
+      uriPoliticalParty: lastInfo.uriPartido,          
+      urlPhoto: lastInfo.urlFoto,
+      updated: lastInfo.data,
+      electoralName: lastInfo.nomeEleitoral,
+      cabinetPhone: lastInfo.gabinete.telefone,
+      email: lastInfo.gabinete.email,
+      situation: lastInfo.situacao,
+      electoralCondition: lastInfo.condicaoEleitoral,
+      actualStatus: lastInfo.descricaoStatus,
+      gender: politicianInfo.sexo,
+      dateOfBirth: politicianInfo.dataNascimento,
+      ufOfBirth: politicianInfo.ufNascimento,
+      hometown: politicianInfo.municipioNascimento,
+      scholarity: politicianInfo.escolaridade
+    })
       politician.save(console.log('New politician created'))
   })
 

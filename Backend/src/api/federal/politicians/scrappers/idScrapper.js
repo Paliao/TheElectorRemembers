@@ -16,7 +16,7 @@ function paginate() {
 
 function scrap(options) {
   return request(options).then((resp) => resp.dados
-    .map(e => 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + e.id))
+    .map(e => e.id))
 }
 
 function idUrls() {

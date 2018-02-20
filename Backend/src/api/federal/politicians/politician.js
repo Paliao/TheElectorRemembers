@@ -12,7 +12,7 @@ const politicianSchema = new mongoose.Schema({
     urlPhoto: { type: String, required: true },
     updated: { type: Date, required: true },
     electoralName: { type: String, required: true },
-    cabinetPhone: { type: String, required: true },
+    cabinetPhone: { type: String, required: false },
     actualStatus: { type: String, required: false },
     email: { type: String, required: true },
     situation: { type: String, required: true },
