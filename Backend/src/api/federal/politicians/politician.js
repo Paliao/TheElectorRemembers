@@ -21,7 +21,8 @@ const politicianSchema = new mongoose.Schema({
     dateOfBirth: { type: Date, required: true },
     ufOfBirth: { type: String, required: false },
     hometown: { type: String, required: true },
-    scholarity: { type: String, required: false }
+    scholarity: { type: String, required: false },
+    expenses: { type: mongoose.Schema.Types.ObjectId, ref: 'Expense' }
 })
 
 module.exports = restful.model('Politician', politicianSchema)

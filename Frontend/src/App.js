@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-
+import '../node_modules/font-awesome/css/font-awesome.min.css'
+import PoliticianList from '../src/politician/politicianList'
 import Navbar from './common/navBar/navBar'
 
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
     return(
       <div>
         <Navbar/>
+        <PoliticianList />
       </div>
     )
   }

@@ -3,6 +3,7 @@ const mongoose = restful.mongoose
 mongoose.connect('mongodb://localhost/electorRemembers')
 
 const expenseSchema = new mongoose.Schema({
+  politician: { type: mongoose.Schema.Types.ObjectId, ref: 'Politician', required: true },
   year: { type: String, required: true },
   month: { type: String, required: true },
   kindOfExpense: { type: String, required: true },

@@ -1,6 +1,7 @@
 const Promise = require('bluebird')
 const request = require('request-promise')
 const PoliticianSchema = require('../politician')
+const expenseCreation = require('./expensesCreation')
 
 const idUrls = require('./idScrapper')
 
@@ -10,9 +11,9 @@ function politicalUrl() {
   })
 }
 
-function politicalRequision(url) {
+function politicalRequision(id) {
   const options = {
-    uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + url,
+    uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + id,
     json: true
   }
   request(options).then(resp => {
@@ -42,8 +43,8 @@ function politicalRequision(url) {
       scholarity: politicianInfo.escolaridade
     })
       politician.save(console.log('New politician created'))
+      expenseCreation(options.uri, politician._id)
   })
-
 }
 
 
