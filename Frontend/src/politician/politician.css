@@ -1,26 +1,48 @@
 .politician-card {
   height: 250px;
   width: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 14px 18px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
   text-align: center;
-  margin: 20px;
-  margin-bottom: 40px;
+  margin: 50px;
+  margin-bottom: 120px;
   float: left;
+  border-radius: 10px;
+}
+
+.politician-card h2 {
+  color: white;
+  margin-top: 0;
+  background-color: rgb(33, 29, 50);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;  
+}
+
+.politician-card h2:hover{
+  color: rgb(0, 200, 255);
+  transition: .5s;
 }
 
 .politician-card img {
-  margin-top: 0px;
-  margin-bottom: -4px;
   height: 200px;
   width: 200px;
 }
 
-.politician-card:hover {
-  transition-duration: .5s;
+.container {
+  margin-top: -6%;
+  padding: 5%;
+  background-color: rgb(33, 29, 50);
+  box-shadow: 0 14px 18px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;  
 }
 
-.container {
-  padding: 30px;
-  background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.politician-card p:hover{
+  color: rgb(0, 200, 255);
+  transition: .5s;
+}
+
+.politician-card h4:hover{
+  color: rgb(0, 200, 255);
+  transition: .5s;
 }

@@ -3,25 +3,22 @@ import './politician.css'
 
 export default (props) => {
   const { all } = props
-  const { actualStatus,
-          civilName, 
-          electoralCondition,
-          electoralName,
+  const { electoralName,
           electoralUf,
-          email,
-          gender,
-          hometown,
-          kind,
           politicalPartyInitials,
-          situation,
           urlPhoto,
           _id 
         } = all
+    
   return(
     <div className='politician-card'>
+      <h2>{politicalPartyInitials}</h2>
       <img src={urlPhoto} alt={electoralName}/>
       <div className='container'>
-        {electoralName}
+        <h4>{electoralName}</h4>
+        <div>
+          <p>{electoralUf}</p>
+        </div>
       </div>
     </div>
   )
