@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import Politician from './politician'
+import PoliticianCard from './politicianCard'
 import { getList } from './politicianActions'
 
 class PoliticianList extends Component {
@@ -12,9 +12,9 @@ class PoliticianList extends Component {
 
   renderPoliticians() {
     const list = this.props.list
-    return list.map( politician => (
-      <Politician all={politician}/>
-    ))
+    return list.map( politician => {
+      return <PoliticianCard key={politician._id} all={politician}/>
+    })
   }
 
   render() {

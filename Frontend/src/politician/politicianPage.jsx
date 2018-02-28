@@ -1,0 +1,22 @@
+const { all } = props
+  const { actualStatus,
+          cabinetPhone,
+          civilName, 
+          dateOfBirth,
+          electoralCondition,
+          electoralName,
+          electoralUf,
+          email,
+          gender,
+          hometown,
+          id,
+          kind,
+          politicalPartyInitials,
+          scholarity,
+          situation,
+          ufOfBirth,
+          updated,
+          uriPoliticalParty,
+          urlPhoto,
+          _id 
+        } = all
