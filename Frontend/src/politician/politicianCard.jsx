@@ -7,7 +7,7 @@ export default (props) => {
           electoralUf,
           politicalPartyInitials,
           urlPhoto,
-          _id 
+          _id
         } = all
     
   return(
@@ -17,7 +17,9 @@ export default (props) => {
       <div className='container'>
         <h4>{electoralName}</h4>
         <div>
-          <p>{electoralUf}</p>
+          <p>
+            {electoralUf}
+          </p>
         </div>
       </div>
     </div>
