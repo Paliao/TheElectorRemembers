@@ -1,13 +1,13 @@
 import React from 'react'
 import './politician.css'
 
-export default (props) => {
-  const { all } = props
+export default props => {
+  const { all, onUfClick } = props
   const { electoralName,
           electoralUf,
           politicalPartyInitials,
           urlPhoto,
-          _id 
+          _id
         } = all
     
   return(
@@ -17,7 +17,9 @@ export default (props) => {
       <div className='container'>
         <h4>{electoralName}</h4>
         <div>
-          <p>{electoralUf}</p>
+          <p onClick={() => onUfClick(`${electoralUf}`, '0')}>
+            {electoralUf}
+          </p>
         </div>
       </div>
     </div>

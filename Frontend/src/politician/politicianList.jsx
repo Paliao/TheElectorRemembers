@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import PoliticianCard from './politicianCard'
-import { getList } from './politicianActions'
+import { getList, filterUf } from './politicianActions'
 
 class PoliticianList extends Component {
   componentWillMount() {
@@ -13,7 +13,8 @@ class PoliticianList extends Component {
   renderPoliticians() {
     const list = this.props.list
     return list.map( politician => {
-      return <PoliticianCard key={politician._id} all={politician}/>
+      return <PoliticianCard key={politician._id} all={politician}
+                onUfClick={this.props.filterUf}/>
     })
   }
 
@@ -27,6 +28,6 @@ class PoliticianList extends Component {
 }
 
 const mapStateToProps = state => ({ list: state.politician.list })
-const mapDispatchToProps = dispatch => bindActionCreators({ getList }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ getList, filterUf }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PoliticianList)

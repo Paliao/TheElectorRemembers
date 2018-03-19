@@ -40,6 +40,7 @@
 .politician-card p:hover{
   color: rgb(0, 200, 255);
   transition: .5s;
+  cursor: pointer;
 }
 
 .politician-card h4:hover{
