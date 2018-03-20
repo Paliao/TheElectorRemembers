@@ -26,9 +26,10 @@
   font-size: 19px;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a span:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
+  cursor: none;
 }
 
 .navbar ul i {
@@ -42,4 +43,11 @@
 .navbar ul i:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar ul li a span {
+      
+      display: none;
+  }
 }
