@@ -1,4 +1,9 @@
-ul.navbar {
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar ul {
   list-style-type: none;
   background-color: rgb(33, 29, 50);
   overflow: hidden;
@@ -7,11 +12,11 @@ ul.navbar {
   margin-right: -10px;
 }
 
-ul.navbar li {
+.navbar ul li {
   float: left;
 }
 
-ul.navbar li a {
+.navbar ul li a {
   display: block;
   color: white;
   padding: 20px 40px;
@@ -21,12 +26,12 @@ ul.navbar li a {
   font-size: 19px;
 }
 
-ul.navbar li a:hover {
+.navbar ul li a:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
 }
 
-ul.navbar i {
+.navbar ul i {
   margin-top: 5px;
   font-size: 50px;
   margin-left: 10px;
@@ -34,7 +39,7 @@ ul.navbar i {
   padding-right: 15px;
 }
 
-ul.navbar i:hover {
+.navbar ul i:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
 }

@@ -7,8 +7,8 @@ class Navbar extends Component {
 
   render() {
     return(
-      <div>
-        <ul className='navbar'>
+      <div className='navbar'>
+        <ul>
         <li>
           <span>
             <i className='fa fa-globe' ></i>

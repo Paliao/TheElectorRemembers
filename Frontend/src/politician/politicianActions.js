@@ -2,9 +2,9 @@ import axios from 'axios'
 
 const BASE_URL = 'http://localhost:3000/api/politicians'
 
-export function getList(page) {
+export function getList(page, parameters='') {
   return dispatch => {
-    axios.get(`${BASE_URL}?limit=40&skip=${page * 40}&sort=electoralName`).then(
+    axios.get(`${BASE_URL}?${parameters}&limit=40&skip=${page * 40}&sort=electoralName`).then(
       resp => {
         dispatch({
           type: 'POLITICIAN_LIST_FETCHED',
@@ -16,14 +16,5 @@ export function getList(page) {
 }
 
 export function filterUf(parameter, page) {
-  return dispatch => {
-    axios.get(`${BASE_URL}?electoralUf=${parameter}&limit=40&skip=${page * 40}`).then(
-      resp => {
-        dispatch({
-          type: 'POLITICIAN_LIST_FETCHED',          
-          payload: resp.data
-        })
-      }
-    )
-  }
+  return getList(page, `electoralUf=${parameter}`)
 }
