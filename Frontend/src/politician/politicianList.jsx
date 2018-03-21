@@ -7,14 +7,17 @@ import { getList, filterUf } from './politicianActions'
 
 class PoliticianList extends Component {
   componentWillMount() {
-    this.props.getList(0)
+    this.props.getList()
   }
 
   renderPoliticians() {
     const list = this.props.list
     return list.map( politician => {
-      return <PoliticianCard key={politician._id} all={politician}
-                onUfClick={this.props.filterUf}/>
+      return <PoliticianCard 
+                key={politician._id}
+                all={politician}
+                onUfClick={this.props.filterUf}
+              />
     })
   }
 

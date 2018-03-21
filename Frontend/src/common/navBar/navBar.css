@@ -29,7 +29,6 @@
 .navbar ul li a span:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
-  cursor: none;
 }
 
 .navbar ul i {

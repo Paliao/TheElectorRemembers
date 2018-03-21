@@ -17,7 +17,7 @@ export default props => {
       <div className='container'>
         <h4>{electoralName}</h4>
         <div>
-          <p onClick={() => onUfClick(`${electoralUf}`, '0')}>
+          <p onClick={() => onUfClick(`${electoralUf}`)}>
             {electoralUf}
           </p>
         </div>

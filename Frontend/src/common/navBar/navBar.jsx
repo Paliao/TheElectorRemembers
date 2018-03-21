@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import './navBar.css'
 import NavBarItem from './navBarItem'
+import Icon from '../icons/icon'
+import { getList } from '../../politician/politicianActions'
 
 class Navbar extends Component {
 
@@ -9,11 +13,7 @@ class Navbar extends Component {
     return(
       <div className='navbar'>
         <ul>
-        <li>
-          <span>
-            <i className='fa fa-globe' ></i>
-          </span>
-        </li>
+          <Icon path='#/' icon='fa fa-globe' onClick={this.props.getList}/>
           <NavBarItem path='javascript:;' label='Estados' />
           <NavBarItem path='javascript:;' label='Politicos' />
           <NavBarItem path='javascript:;' label='Votações' />
@@ -25,4 +25,6 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+const mapDispatchToProps = dispatch => bindActionCreators({ getList }, dispatch)
+
+export default  connect(null, mapDispatchToProps)(Navbar)
