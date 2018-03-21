@@ -18,3 +18,7 @@ export function getList(page='0', parameters='') {
 export function filterUf(parameter, page='0') {
   return getList(page, `electoralUf=${parameter}`)
 }
+
+export function filterParty(parameter, page='0') {
+  return getList(page, `politicalPartyInitials=${parameter}`)
+}

@@ -1,21 +1,22 @@
 .politician-card {
-  height: 250px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   box-shadow: 0 14px 18px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
   text-align: center;
   margin: 50px;
   margin-bottom: 120px;
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-left: 50px;
   float: left;
   border-radius: 10px;
 }
 
 .politician-card h2 {
-  color: white;
   margin-top: 0;
-  background-color: rgb(33, 29, 50);
+  background-color: rgb(230, 230, 230);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 3px;  
+  border-radius: 3px;
+  cursor: pointer; 
 }
 
 .politician-card h2:hover{
@@ -24,18 +25,23 @@
 }
 
 .politician-card img {
-  height: 200px;
-  width: 200px;
+  margin-top: -20px;
+  height: 250px;
+  width: 300px;
 }
 
 .container {
-  margin-top: -6%;
-  padding: 5%;
-  background-color: rgb(33, 29, 50);
+  margin-top: -10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(230, 230, 230);
   box-shadow: 0 14px 18px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
-  color: white;
   font-size: 15px;  
+}
+
+.politician-card p{
+  font-size: 25px;
 }
 
 .politician-card p:hover{

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import PoliticianCard from './politicianCard'
-import { getList, filterUf } from './politicianActions'
+import { getList, filterUf, filterParty } from './politicianActions'
 
 class PoliticianList extends Component {
   componentWillMount() {
@@ -17,6 +17,7 @@ class PoliticianList extends Component {
                 key={politician._id}
                 all={politician}
                 onUfClick={this.props.filterUf}
+                onPartyClick={this.props.filterParty}
               />
     })
   }
@@ -31,6 +32,6 @@ class PoliticianList extends Component {
 }
 
 const mapStateToProps = state => ({ list: state.politician.list })
-const mapDispatchToProps = dispatch => bindActionCreators({ getList, filterUf }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ getList, filterUf, filterParty }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PoliticianList)

@@ -5,7 +5,7 @@
 
 .navbar ul {
   list-style-type: none;
-  background-color: rgb(33, 29, 50);
+  background-color: rgb(230, 230, 230);
   overflow: hidden;
   margin-top: -10px;
   margin-left: -10px;
@@ -18,7 +18,7 @@
 
 .navbar ul li a {
   display: block;
-  color: white;
+  color: black;
   padding: 20px 40px;
   border-radius: 15px;
   text-decoration: none;
@@ -26,16 +26,17 @@
   font-size: 19px;
 }
 
-.navbar ul li a span:hover {
+.navbar ul li span:hover {
   color: rgb(0, 200, 255);
   transition-duration: .5s;
+  cursor: pointer;
 }
 
 .navbar ul i {
   margin-top: 5px;
   font-size: 50px;
   margin-left: 10px;
-  color: rgb(34, 255, 0);
+  color: rgb(23, 5, 89);
   padding-right: 15px;
 }
 
