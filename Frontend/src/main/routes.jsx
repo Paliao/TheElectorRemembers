@@ -1,7 +1,6 @@
 import React from 'react'
-import { Router, Route, Redirect, Switch } from 'react-router'
+import { Route, Redirect, Switch } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
 
 import App from '../App'
 import PoliticianList from '../politician/politicianList'

@@ -4,7 +4,7 @@ const BASE_URL = 'http://localhost:3000/api/politicians'
 
 export function getList(page='0', parameters='') {
   return dispatch => {
-    axios.get(`${BASE_URL}?${parameters}&limit=40&skip=${page * 40}&sort=electoralName`).then(
+    axios.get(`${BASE_URL}?${parameters}limit=40&skip=${page * 40}&sort=electoralName`).then(
       resp => {
         dispatch({
           type: 'POLITICIAN_LIST_FETCHED',
@@ -15,10 +15,25 @@ export function getList(page='0', parameters='') {
   }
 }
 
+function setParameter(filter, value) {
+  return dispatch => {
+    dispatch({
+      type: 'POLITICIAN_FILTER_ADDED',
+      payload: { filter, value }
+    })
+  }
+}
+
 export function filterUf(parameter, page='0') {
-  return getList(page, `electoralUf=${parameter}`)
+  return [
+    getList(page, `electoralUf=${parameter}&`),
+    setParameter('electoralUf', parameter)
+  ]
 }
 
 export function filterParty(parameter, page='0') {
-  return getList(page, `politicalPartyInitials=${parameter}`)
+  return [
+    getList(page, `politicalPartyInitials=${parameter}&`),
+    setParameter('politicalPartyInitials', parameter)
+  ]
 }
