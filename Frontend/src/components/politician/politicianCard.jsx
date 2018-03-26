@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './politician.css'
 
 export default props => {
-  const { all,
+  const { match,
+          all,
           onUfClick,
           onPartyClick
         } = props
@@ -10,15 +12,20 @@ export default props => {
           electoralUf,
           politicalPartyInitials,
           urlPhoto,
+          politician_id,
           _id
         } = all
     
   return(
     <div className='politician-card'>
-      <h2 onClick={() => onPartyClick(`${politicalPartyInitials}`)}>
+      <h2 onClick={() => console.log(props.all)}>
         {politicalPartyInitials}
       </h2>
-      <img src={urlPhoto} alt={electoralName}/>
+
+      <Link to={`profile/${politician_id}`} >
+        <img src={urlPhoto} alt={electoralName}/>
+      </Link>
+
       <div className='container'>
         <h4>{electoralName}</h4>
         <div>

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
-export default class Profile extends Component {
-  render() {
-    return (
-      null
-    )
-  }
-}
+const Profile = ({ match }) => (
+  <div>
+    <h3>
+      {match.params.profile_id}
+    </h3>
+  </div>
+)
+
+export default Profile

@@ -22,7 +22,7 @@ function politicalRequision(id) {
     
     const politician = new PoliticianSchema({
 
-      id: politicianInfo.id,
+      politician_id: politicianInfo.id,
       kind: 'DEPUTADO FEDERAL',
       electoralUf: lastInfo.siglaUf,
       civilName: politicianInfo.nomeCivil,
@@ -43,7 +43,7 @@ function politicalRequision(id) {
       scholarity: politicianInfo.escolaridade
     })
       politician.save(console.log('New politician created'))
-      expenseCreation(options.uri, politician._id)
+      // expenseCreation(options.uri, politician._id)
   })
 }
 
