@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import './navBar.css'
 import NavBarItem from './navBarItem'
 import Icon from '../icons/icon'
-import { getList } from '../../politician/politicianActions'
+import { getList } from '../../components/politician/politicianActions'
 
 class Navbar extends Component {
 
