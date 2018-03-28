@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../src/main/dependencies'
+import './main/depencendencies'
 import Navbar from './common/navBar/navBar'
 
 export default props => (
