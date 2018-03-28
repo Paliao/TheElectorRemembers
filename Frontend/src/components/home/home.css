@@ -1,0 +1,35 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0,0.3)),url('../../img/urna.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.home-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -60%)
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+h1 {
+  color: white;  
+  word-spacing: 3px;
+  line-height: 145%;
+  letter-spacing: 1px;
+  font-size: 200%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: rgb(175, 175, 175);
+  font-size: 140%;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
