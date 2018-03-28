@@ -1,10 +1,10 @@
 import React from 'react'
 
-import '../node_modules/font-awesome/css/font-awesome.min.css'
+import '../src/main/dependencies'
 import Navbar from './common/navBar/navBar'
 
 export default props => (
-  <div>
+  <div className='base'>
     <Navbar/>
     <div className='background'>
       {props.children}
