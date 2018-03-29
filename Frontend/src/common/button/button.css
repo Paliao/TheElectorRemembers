@@ -1,0 +1,29 @@
+.home-buttons {
+  width: 100%;
+}
+
+.btn {
+  display: inline;
+  padding: 15px 35px;
+  border-radius: 200px;
+  border: 1px solid #3c58e2;  
+}
+
+.btn a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  font-size: 145%;
+  letter-spacing: 1px;
+}
+
+.btn-full {
+  background-color: #3c58e2;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.btn:hover {
+  transition: background-color 1s;
+  background-color: #1a34af;
+}
