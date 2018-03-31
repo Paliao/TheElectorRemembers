@@ -1,7 +1,6 @@
 import React from 'react'
 
-import './homeNavbar.css'
-import NavItem from '../navBar/navBarItem'
+import NavItem from '../../common/navBar/navBarItem'
 
 export default props => (
   <nav>

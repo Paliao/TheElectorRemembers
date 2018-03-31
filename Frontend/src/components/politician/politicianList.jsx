@@ -24,7 +24,7 @@ class PoliticianList extends Component {
 
   render() {
     return (
-      <div>
+      <div class='politician-list'>
         {this.renderPoliticians()}
       </div>
     )
