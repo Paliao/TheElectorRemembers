@@ -44,8 +44,8 @@ export function filterParty(value, page='0') {
 function queryAssembler(filter, filterValue, page) {
   return queryString.stringify({
     [filter]: filterValue,
-    limit: 30,
-    skip: page * 30,
+    limit: 25,
+    skip: page * 25,
     sort: 'electoralName'
   })
 }

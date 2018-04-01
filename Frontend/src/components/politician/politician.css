@@ -1,3 +1,18 @@
-.politician-list {
+.list-row {
+  width: 80%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.list-row li {
+  background-color: red;
+  padding: 0;
+  float: left;
+  width: 20%;
+}
+
+.card-photo img{
   width: 100%;
+  height: auto;
+  margin-bottom: -5px;
 }

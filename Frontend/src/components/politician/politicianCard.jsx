@@ -17,23 +17,23 @@ export default props => {
         } = all
     
   return(
-    <div className='politician-card'>
-      <h2 onClick={() => console.log(props.all)}>
-        {politicalPartyInitials}
-      </h2>
+    <li>
 
-      <Link to={`profile/${politician_id}`} >
-        <img src={urlPhoto} alt={electoralName}/>
-      </Link>
+      <figure className='card-photo'>
+        <Link to={`profile/${politician_id}`} >
+          <img src={urlPhoto} alt={electoralName}/>
+        </Link>
+      </figure>
 
-      <div className='container'>
-        <h4>{electoralName}</h4>
-        <div>
-          <p onClick={() => onUfClick(`${electoralUf}`)}>
-            {electoralUf}
-          </p>
-        </div>
-      </div>
-    </div>
+    </li>
   )
 }
+      // <h2 onClick={() => onPartyClick(politicalPartyInitials)}>
+      //   {politicalPartyInitials}
+      // </h2>
+      //   <h4>{electoralName}</h4>
+      //   <div>
+      //     <p onClick={() => onUfClick(electoralUf)}>
+      //       {electoralUf}
+      //     </p>
+      // </div>

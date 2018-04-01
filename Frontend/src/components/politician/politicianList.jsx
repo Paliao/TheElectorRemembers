@@ -24,9 +24,11 @@ class PoliticianList extends Component {
 
   render() {
     return (
-      <div class='politician-list'>
-        {this.renderPoliticians()}
-      </div>
+      <section >
+        <ul className='list-row'>
+          {this.renderPoliticians()}
+        </ul>
+      </section>
     )
   }
 }
