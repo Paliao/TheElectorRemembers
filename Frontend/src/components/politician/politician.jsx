@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import PoliticianList from './politicianList'
-import PoliticianProfile from './politicianPage'
+import PoliticianProfile from './politicianProfile'
 import NavBar from '../../common/navBar/navBar'
 
 export default props => (

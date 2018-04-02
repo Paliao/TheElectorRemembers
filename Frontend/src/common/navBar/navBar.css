@@ -3,7 +3,7 @@
   height: 40px;
   text-align: center;
   width: 100%;
-  background-color: #2d4ce0;
+  background-color: #227093;
   margin: 0 auto 50px;
 }
 
@@ -17,11 +17,18 @@
   text-decoration: none;
   text-align: center;
   font-size: 120%;
-  padding: 40px;
+  padding: 9px 40px 5px;
   line-height: 35px;
-  transition: color 1s;
 }
 
 .main-nav li a:hover {
-  color: #c1caf6;
+  background-color: #18506a;
+}
+
+/* Search Icon */
+
+.main-nav li .material-icons {
+  color: white;
+  font-size: 150%;
+  vertical-align: middle;
 }

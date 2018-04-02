@@ -2,6 +2,7 @@ import React from 'react'
 
 import './navBar.css'
 import NavBarItem from './navBarItem'
+import SearchIcon from '../../common/search/searchIcon'
 
 export default navbar => (
   <nav>
@@ -11,6 +12,7 @@ export default navbar => (
       <NavBarItem path='javascript:;' label='Quiz' />
       <NavBarItem path='javascript:;' label='Recordistas' />
       <NavBarItem path='javascript:;' label='FAQ' />
+      <SearchIcon />
     </ul>
   </nav>
 )
