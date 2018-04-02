@@ -5,6 +5,7 @@ import Navbar from './common/navBar/navBar'
 
 export default props => (
   <div className='base'>
+    <Navbar />
     <div>
       {props.children}
     </div>

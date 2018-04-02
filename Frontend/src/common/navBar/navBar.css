@@ -1,3 +1,27 @@
-.nav {
-  float: right;
+.main-nav {
+  list-style: none;
+  height: 40px;
+  text-align: center;
+  width: 100%;
+  background-color: #2d4ce0;
+  margin: 0 auto 50px;
+}
+
+.main-nav li {
+  display: inline;
+  margin-right: 40px;
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 120%;
+  padding: 40px;
+  line-height: 35px;
+  transition: color 1s;
+}
+
+.main-nav li a:hover {
+  color: #c1caf6;
 }
