@@ -20,7 +20,7 @@ export default props => {
     <li>
 
       <figure className='card-photo'>
-        <Link to={`profile/${politician_id}`} >
+        <Link to={`politician/profile/${politician_id}`} >
           <img src={urlPhoto} alt={electoralName}/>
         </Link>
       </figure>

@@ -4,8 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from '../App'
 import Home from '../components/home/home'
-import PoliticianList from '../components/politician/politicianList'
-import PoliticianProfile from '../components/profile/politicianProfile'
+import Politician from '../components/politician/politician'
 
 export default props => {
   return (
@@ -13,8 +12,7 @@ export default props => {
       <App>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/politicianList' component={PoliticianList} />
-          <Route exact path='/profile/:profile_id' component={PoliticianProfile} />        
+          <Route path='/politician' component={Politician} />  
           <Redirect from='*' to='/' />
         </Switch>
       </App>
