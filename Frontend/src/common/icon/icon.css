@@ -1,0 +1,12 @@
+.plus {
+  text-align: center;
+}
+
+.plus .material-icons {
+  margin-top: 40px;
+  background-color: #123b4e;
+  width: 58px;
+  color: white;
+  font-size: 300%;
+  border-radius: 50%;
+}

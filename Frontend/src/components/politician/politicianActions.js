@@ -3,9 +3,9 @@ import queryString from 'query-string'
 
 const BASE_URL = 'http://localhost:3000/api/politicians'
 
-export function getList(filter='', filterValue='', page='0') {
+export function getList(page = 1, filter='', filterValue='') {
   return dispatch => {
-    const query = queryAssembler(filter, filterValue, page)
+    const query = queryAssembler(page, filter, filterValue)
 
     axios.get(`${BASE_URL}?${query}`).then(
       resp => {
@@ -27,25 +27,24 @@ function setParameter(filter, value) {
   }
 }
 
-export function filterUf(value, page='0') {
+export function filterUf(value, page=1) {
   return [
     getList('electoralUf', value, page),
     setParameter('electoralUf', value)
   ]
 }
 
-export function filterParty(value, page='0') {
+export function filterParty(value, page=1) {
   return [
     getList('politicalPartyInitials', value, page),
     setParameter('politicalPartyInitials', value)
   ]
 }
 
-function queryAssembler(filter, filterValue, page) {
+function queryAssembler(page = 1, filter='', filterValue='') {
   return queryString.stringify({
     [filter]: filterValue,
-    limit: 12,
-    skip: page * 12,
+    limit: 12 * page,
     sort: 'electoralName'
   })
 }

@@ -30,7 +30,7 @@ class PoliticianList extends Component {
         <ul className='list-row'>
           {this.renderPoliticians()}
         </ul>
-        <Icon iconClass='plus' icon='add circle' onClick={console.log('aaaaaaaaaa')}/>
+        <Icon iconClass='plus' icon='add circle'/>
       </section>
     )
   }

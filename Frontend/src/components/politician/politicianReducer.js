@@ -1,6 +1,7 @@
-const INITIAL_STATE = { 
+const INITIAL_STATE = {
   list: [],
-  filters: {}
+  filters: {},
+  pageQuantity: 1
 }
 
 export default (state = INITIAL_STATE, action) => {
