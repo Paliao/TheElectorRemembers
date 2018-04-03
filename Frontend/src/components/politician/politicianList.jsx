@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import PoliticianCard from './politicianCard'
 import { getList, filterUf, filterParty } from './politicianActions'
+import Icon from '../../common/icon/icon'
 
 class PoliticianList extends Component {
   componentWillMount() {
@@ -25,9 +26,11 @@ class PoliticianList extends Component {
   render() {
     return (
       <section >
+        <h1>Políticos</h1>
         <ul className='list-row'>
           {this.renderPoliticians()}
         </ul>
+        <Icon iconClass='plus' icon='add circle' onClick={console.log('aaaaaaaaaa')}/>
       </section>
     )
   }

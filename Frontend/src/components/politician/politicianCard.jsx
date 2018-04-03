@@ -17,7 +17,7 @@ export default props => {
         } = all
     
   return(
-    <li>
+    <li className='span-1-of-6 politician-card'>
 
       <figure className='card-photo'>
         <Link to={`politician/profile/${politician_id}`} >
