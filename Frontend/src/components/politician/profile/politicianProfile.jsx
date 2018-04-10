@@ -1,10 +1,9 @@
 import React from 'react'
+import './profile.css'
 
 export default props => (
-  <div>
-    <h1>
-      {props.match.params.profile_id}
-    </h1>
+  <div className='profile-page'>
+    <h1>{props.match.params.politician_id}</h1>
   </div>
 )
 
